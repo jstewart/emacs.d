@@ -1,0 +1,5 @@
+*.elc
+/erc_setup.el
+*.DS_Store
+*~
+.org-id-locations
