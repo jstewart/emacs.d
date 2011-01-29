@@ -2,11 +2,11 @@
 
 ;; Function Keys
 (require 'rinari)
-(global-set-key [f2] 'rinari-find-model)
-(global-set-key [f3] 'rinari-find-controller)
-(global-set-key [f4] 'rinari-find-view)
-(global-set-key [f5] 'rinari-find-test)
-(global-set-key [f6] 'rinari-find-rspec)
+(global-set-key [f2] 'rinari-insert-erb-skeleton)
+;; (global-set-key [f3] 'rinari-find-controller)
+;; (global-set-key [f4] 'rinari-find-view)
+;; (global-set-key [f5] 'rinari-find-test)
+;; (global-set-key [f6] 'rinari-find-rspec)
 (global-set-key [f7] 'multi-term)
 
 ;; From Emacs Starter Kit
@@ -47,6 +47,10 @@
 (global-set-key (kbd "C-x C-m") 'execute-extended-command)
 (global-set-key (kbd "C-,") 'zencoding-expand-line)
 (global-set-key (kbd "C-x y") 'anything-show-kill-ring)
+
+;; TAGS
+(global-set-key "\M-?" 'etags-select-find-tag-at-point)
+(global-set-key "\M-." 'etags-select-find-tag)
 
 
 (provide 'custom-keys)

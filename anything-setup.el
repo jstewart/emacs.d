@@ -7,7 +7,7 @@
 (require 'anything-rails)
 
 (global-set-key [f8] 'my-anything)
-(global-set-key (kbd "M-.") 'anything-etags-select-from-here)
+;; (global-set-key (kbd "M-.") 'anything-etags-select-from-here)
 
 (defun my-anything ()
   (interactive)
@@ -17,7 +17,6 @@
      anything-c-source-recentf
      anything-c-source-rails-project-files
      anything-c-source-files-in-current-dir
-     anything-c-source-man-pages
      anything-c-source-emacs-commands)
    "*my-anything*"))
 

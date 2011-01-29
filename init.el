@@ -18,6 +18,7 @@
 
 ;;;;; Vendor libs
 ;; general coding/editing niceties
+(require 'full-ack)
 (require 'anything-setup)
 (require 'line-num)
 (require 'multi-term-setup)
