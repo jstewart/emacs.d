@@ -48,9 +48,4 @@
 (global-set-key (kbd "C-,") 'zencoding-expand-line)
 (global-set-key (kbd "C-x y") 'anything-show-kill-ring)
 
-;; TAGS
-(global-set-key "\M-?" 'etags-select-find-tag-at-point)
-(global-set-key "\M-." 'etags-select-find-tag)
-
-
 (provide 'custom-keys)

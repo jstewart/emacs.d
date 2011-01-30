@@ -9,14 +9,12 @@
 
 ;; Color theme setup
 
-(setq default-frame-alist
-      '(
-        (background-color . "black")
-        ))
+(setq default-frame-alist '((background-color . "black")))
 (require 'color-theme)
 (color-theme-initialize)
 
-(load-file "~/.emacs.d/vendor/color-theme-ir-black.el")
-(color-theme-ir-black)
+;; (load-file "~/.emacs.d/vendor/color-theme-ir-black.el")
+;; (color-theme-ir-black)
+(color-theme-charcoal-black)
 
 (provide 'appearance)

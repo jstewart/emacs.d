@@ -3,6 +3,9 @@
 ;; Terminal Bell. No sounds. No flashes.
 (setq ring-bell-function 'ignore)
 
+;; Annoyances
+(setq inhibit-startup-message t)
+
 (when (equal system-type 'darwin)
 ;; Paths
 (setenv "PATH" (concat "/opt/local/bin:/usr/local/bin:" (getenv "PATH")))

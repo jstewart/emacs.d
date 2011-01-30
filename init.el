@@ -2,6 +2,7 @@
 ;;
 (add-to-list 'load-path "~/.emacs.d/")
 (add-to-list 'load-path "~/.emacs.d/vendor/")
+(add-to-list 'load-path "~/.emacs.d/vendor/textmate.el")
 (require 'org-setup)
 
 ;; Load up ELPA, the package manager
@@ -25,6 +26,8 @@
 (require 'vimpulse)
 (require 'whitespace)
 (require 'undo-tree)
+(require 'textmate)
+(textmate-mode)
 (global-undo-tree-mode)
 
 ;; Additional Modes
@@ -47,6 +50,10 @@
 (require 'erc-setup)
 (require 'customizations)
 ;;;;; end my customizations
+
+;;;;; Default Framse Size
+(add-to-list 'default-frame-alist '(height . 45))
+(add-to-list 'default-frame-alist '(width . 150))
 
 (provide 'init)
 (custom-set-variables
