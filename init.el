@@ -48,6 +48,7 @@
 (require 'useful-functions)
 (require 'snippets)
 (require 'erc-setup)
+(require 'etags-config)
 (require 'customizations)
 ;;;;; end my customizations
 

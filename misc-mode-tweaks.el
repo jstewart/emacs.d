@@ -18,6 +18,14 @@
 (add-to-list 'auto-mode-alist '("\\.gemspec$" . ruby-mode))
 (add-to-list 'auto-mode-alist '("\\.ru$" . ruby-mode))
 
+;; Hideshow (code folding)
+(load-library "hideshow")
+(add-to-list 'hs-special-modes-alist
+	     '(ruby-mode
+	       "\\(def\\|do\\|{\\)" "\\(end\\|end\\|}\\)" "#"
+	       (lambda (arg) (ruby-end-of-block)) nil))
+(add-hook 'ruby-mode-hook 'hs-minor-mode)
+
 ;; Flymake for ruby
 (require 'flymake)
 ;; I don't like the default colors :)
