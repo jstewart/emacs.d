@@ -12,6 +12,7 @@
 (push "/usr/local/bin" exec-path))
 
 ;; Nice to haves
+(setq-default show-trailing-whitespace t)
 (defalias 'qrr 'query-replace-regexp)
 (require 'uniquify)
 (setq uniquify-buffer-name-style 'post-forward-angle-brackets)
