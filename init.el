@@ -19,7 +19,6 @@
 
 (require 'package)
 (package-initialize)
-(require 'starter-kit-elpa)
 
 ;;;;; Vendor libs
 ;; general coding/editing niceties
