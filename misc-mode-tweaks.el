@@ -18,6 +18,11 @@
 (add-to-list 'auto-mode-alist '("\\.gemspec$" . ruby-mode))
 (add-to-list 'auto-mode-alist '("\\.ru$" . ruby-mode))
 
+;; Js2 is awesome
+(add-to-list 'auto-mode-alist '("\\.js$" . js2-mode))
+(setq js2-basic-offset 2)
+
+
 ;; Hideshow (code folding)
 (load-library "hideshow")
 (add-to-list 'hs-special-modes-alist
@@ -50,8 +55,12 @@
           '(lambda ()
 	     ;; Don't want flymake mode for ruby regions in erb files and also on read only files
 	     (if (and (not (null buffer-file-name)) (file-writable-p buffer-file-name))
-		 (flymake-mode))
-	     ))
+		 (flymake-mode))))
+(require 'ruby-electric)
+(add-hook 'ruby-mode-hook (lambda () (ruby-electric-mode t)))
+
+;; Debugging
+(require 'rdebug)
 
 (eval-after-load 'ruby-mode
   '(progn
@@ -66,15 +75,14 @@
      (define-key ruby-mode-map (kbd "RET") 'reindent-then-newline-and-indent)
      ))
 
-
-;; emacs wrapper for ri (replaces old ri.el)
-;; see http://www.emacswiki.org/cgi-bin/wiki/RiEl for details
-;; however, the latest code was grabbed from
-;; http://github.com/technomancy/emacs-starter-kit/(github commit gobbly gook)/elpa-to-submit/ri.el
-;; may slow Aquamacs startup
-(require 'ri)
-
-;; Use Ack for rgrep
-(custom-set-variables '(grep-program "ack -H -a --nogroup --nocolor"))
+;; Speedbar hacks
+(add-hook 'speedbar-mode-hook
+          (lambda()
+            (speedbar-add-supported-extension "\\.rb")
+	    (speedbar-add-supported-extension "\\.ru")
+	    (speedbar-add-supported-extension "\\.erb")
+	    (speedbar-add-supported-extension "\\.rjs")
+	    (speedbar-add-supported-extension "\\.rhtml")
+	    (speedbar-add-supported-extension "\\.rake")))
 
 (provide 'misc-mode-tweaks)

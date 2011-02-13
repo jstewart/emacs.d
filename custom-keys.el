@@ -7,6 +7,7 @@
 ;; (global-set-key [f4] 'rinari-find-view)
 ;; (global-set-key [f5] 'rinari-find-test)
 ;; (global-set-key [f6] 'rinari-find-rspec)
+(global-set-key [f5] 'delete-trailing-whitespace)
 (global-set-key [f7] 'multi-term)
 
 ;; From Emacs Starter Kit

@@ -3,6 +3,10 @@
 (add-to-list 'load-path "~/.emacs.d/")
 (add-to-list 'load-path "~/.emacs.d/vendor/")
 (add-to-list 'load-path "~/.emacs.d/vendor/textmate.el")
+(when (equal system-type 'darwin)
+(setenv "PATH" (concat "/opt/local/bin:/usr/local/bin:" (getenv "PATH")))
+(push "/usr/local/bin" exec-path))
+
 (require 'org-setup)
 
 ;; Load up ELPA, the package manager
@@ -32,7 +36,11 @@
 
 ;; Additional Modes
 (require 'rinari)
+(require 'ri)
 (require 'nxhtml)
+(require 'rspec-mode)
+;; (require 'ruby-block)
+;; (ruby-block-mode t)
 (require 'yaml-mode)
 (add-to-list 'auto-mode-alist '("\\.yml$" . yaml-mode))
 (require 'zencoding-mode)
@@ -62,11 +70,4 @@
   ;; If you edit it by hand, you could mess it up, so be careful.
   ;; Your init file should contain only one such instance.
   ;; If there is more than one, they won't work right.
- '(grep-program "ack -H -a --nogroup --nocolor" t)
- '(org-agenda-files (quote ("~/org/work.org"))))
-(custom-set-faces
-  ;; custom-set-faces was added by Custom.
-  ;; If you edit it by hand, you could mess it up, so be careful.
-  ;; Your init file should contain only one such instance.
-  ;; If there is more than one, they won't work right.
- )
+ '(ack-prompt-for-directory t))
