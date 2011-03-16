@@ -1,7 +1,6 @@
 ;; Appearance
 (setq cursor-type 'bar)
 (blink-cursor-mode t)
-(set-face-attribute 'default nil :font "-apple-Monaco-medium-normal-normal-*-14-*-*-*-m-0-iso10646-")
 (setq term-default-bg-color nil)
 (setq term-default-fg-color "#FFFFFF")
 (setq column-number-mode t)

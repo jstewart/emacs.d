@@ -3,3 +3,7 @@ erc-setup.el
 *.DS_Store
 *~
 .org-id-locations
+/gnus-setup.el
+/local-settings.el
+/tramp
+/url/cookies

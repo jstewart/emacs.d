@@ -11,6 +11,7 @@
 (defalias 'qrr 'query-replace-regexp)
 (require 'uniquify)
 (setq uniquify-buffer-name-style 'post-forward-angle-brackets)
-(custom-set-variables '(grep-program "ack -H -a --nogroup --nocolor"))
+(global-auto-revert-mode t)
+(setq ack-prompt-for-directory t)
 
 (provide 'customizations)

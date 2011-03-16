@@ -26,7 +26,6 @@
 (require 'anything-setup)
 (require 'line-num)
 (require 'multi-term-setup)
-(require 'vimpulse)
 (require 'whitespace)
 (require 'undo-tree)
 (require 'textmate)
@@ -57,16 +56,7 @@
 (require 'erc-setup)
 (require 'etags-config)
 (require 'customizations)
+(require 'local-settings)
 ;;;;; end my customizations
 
-;;;;; Default Framse Size
-(add-to-list 'default-frame-alist '(height . 45))
-(add-to-list 'default-frame-alist '(width . 150))
-
 (provide 'init)
-(custom-set-variables
-  ;; custom-set-variables was added by Custom.
-  ;; If you edit it by hand, you could mess it up, so be careful.
-  ;; Your init file should contain only one such instance.
-  ;; If there is more than one, they won't work right.
- '(ack-prompt-for-directory t))

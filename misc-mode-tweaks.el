@@ -56,11 +56,10 @@
 	     ;; Don't want flymake mode for ruby regions in erb files and also on read only files
 	     (if (and (not (null buffer-file-name)) (file-writable-p buffer-file-name))
 		 (flymake-mode))))
-(require 'ruby-electric)
-(add-hook 'ruby-mode-hook (lambda () (ruby-electric-mode t)))
 
-;; Debugging
-(require 'rdebug)
+;; Decided that electric is poop.
+;; (require 'ruby-electric)
+;; (add-hook 'ruby-mode-hook (lambda () (ruby-electric-mode t)))
 
 (eval-after-load 'ruby-mode
   '(progn
