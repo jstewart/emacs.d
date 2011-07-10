@@ -20,10 +20,11 @@
 (add-hook 'ruby-mode-hook 'hs-minor-mode)
 
 ;; Syntax checking in flymake
+(require 'flymake)
 (defun flymake-ruby-init ()
   (let* ((temp-file   (flymake-init-create-temp-buffer-copy
                        'flymake-create-temp-inplace))
-	 (local-file  (file-relative-name
+         (local-file  (file-relative-name
                        temp-file
                        (file-name-directory buffer-file-name))))
     (list "ruby" (list "-c" local-file))))
@@ -35,9 +36,9 @@
 
 (add-hook 'ruby-mode-hook
           '(lambda ()
-	     ;; Don't want flymake mode for ruby regions in erb files and also on read only files
-	     (if (and (not (null buffer-file-name)) (file-writable-p buffer-file-name))
-		 (flymake-mode))))
+             ;; Don't want flymake mode for ruby regions in erb files and also on read only files
+             (if (and (not (null buffer-file-name)) (file-writable-p buffer-file-name))
+                 (flymake-mode))))
 
 (eval-after-load 'ruby-mode
   '(progn
@@ -46,9 +47,9 @@
      (setq ruby-use-encoding-map nil)
      (add-hook 'ruby-mode-hook 'inf-ruby-keys)
      (add-hook 'ruby-mode-hook
-	       (lambda ()
-		 (define-key ruby-mode-map "\C-c#" 'comment-or-uncomment-region)
-		 ))
+               (lambda ()
+                 (define-key ruby-mode-map "\C-c#" 'comment-or-uncomment-region)
+                 ))
      (define-key ruby-mode-map (kbd "RET") 'reindent-then-newline-and-indent)
      ))
 
@@ -56,10 +57,10 @@
 (add-hook 'speedbar-mode-hook
           (lambda()
             (speedbar-add-supported-extension "\\.rb")
-	    (speedbar-add-supported-extension "\\.ru")
-	    (speedbar-add-supported-extension "\\.erb")
-	    (speedbar-add-supported-extension "\\.rjs")
-	    (speedbar-add-supported-extension "\\.rhtml")
-	    (speedbar-add-supported-extension "\\.rake")))
+            (speedbar-add-supported-extension "\\.ru")
+            (speedbar-add-supported-extension "\\.erb")
+            (speedbar-add-supported-extension "\\.rjs")
+            (speedbar-add-supported-extension "\\.rhtml")
+            (speedbar-add-supported-extension "\\.rake")))
 
 (provide 'ruby-config)

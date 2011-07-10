@@ -23,4 +23,7 @@
 (set-keyboard-coding-system 'utf-8)
 (prefer-coding-system 'utf-8)
 
+;; Clean buffer on save
+(add-hook 'before-save-hook 'cleanup-buffer)
+
 (provide 'customizations)
