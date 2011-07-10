@@ -7,7 +7,7 @@
   (push "/usr/local/bin" exec-path))
 
 (unless (file-directory-p "~/.emacs.d/elpa")
-	    (make-directory "~/.emacs.d/elpa" t))
+            (make-directory "~/.emacs.d/elpa" t))
 (require 'package)
 (package-initialize)
 
@@ -27,6 +27,7 @@
 (require 'erc-setup)
 (require 'custom-keys)
 (require 'misc-mode-tweaks)
+(require 'python-config)
 (require 'ruby-config)
 (require 'useful-functions)
 (require 'snippets)
