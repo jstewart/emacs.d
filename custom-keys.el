@@ -2,18 +2,17 @@
 
 ;; Function Keys
 (require 'rinari)
+(global-set-key [f1] 'hippie-expand)
 (global-set-key [f2] 'rinari-insert-erb-skeleton)
-;; (global-set-key [f3] 'rinari-find-controller)
-;; (global-set-key [f4] 'rinari-find-view)
-;; (global-set-key [f5] 'rinari-find-test)
-;; (global-set-key [f6] 'rinari-find-rspec)
 (global-set-key [f5] 'delete-trailing-whitespace)
 (global-set-key [f7] 'multi-term)
+(global-set-key (kbd "C-<f8>") 'hs-hide-all)
+(global-set-key (kbd "M-<f8>") 'hs-show-all)
+(global-set-key (kbd "s-<f8>") 'hs-toggle-hiding)
+(global-set-key (kbd "C-<f9>") 'hs-hide-block)
+(global-set-key (kbd "M-<f9>") 'hs-show-block)
 
 ;; From Emacs Starter Kit
-;; Completion that uses many different methods to find options.
-(global-set-key (kbd "M-/") 'hippie-expand)
-
 ;; Perform general cleanup.
 (global-set-key (kbd "C-c n") 'cleanup-buffer)
 
@@ -26,8 +25,6 @@
 
 ;; File finding
 (global-set-key (kbd "C-x M-f") 'ido-find-file-other-window)
-(global-set-key (kbd "C-x C-M-f") 'find-file-in-project)
-(global-set-key (kbd "C-x f") 'recentf-ido-find-file)
 (global-set-key (kbd "C-c y") 'bury-buffer)
 (global-set-key (kbd "C-c r") 'revert-buffer)
 (global-set-key (kbd "M-`") 'file-cache-minibuffer-complete)

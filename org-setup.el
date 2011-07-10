@@ -17,7 +17,7 @@
        '((sequence "TODO(t!)" "WAIT(w@/!)" "|" "DONE(d@/!)" "CANCELED(c@)")))
 
  (setq org-link-abbrev-alist
-       '(("jira" . "http://jira.fusionary.com/browse/")
+       '(("jira" . "http://jira.fusionary.com:8080/browse/")
          ("google"   . "http://www.google.com/search?q=")))
 
 (setq org-agenda-files (list "~/org/work.org"

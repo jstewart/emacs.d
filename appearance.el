@@ -12,8 +12,11 @@
 (require 'color-theme)
 (color-theme-initialize)
 
-(load-file "~/.emacs.d/vendor/color-theme-ir-black.el")
-(color-theme-ir-black)
+(load-file "~/.emacs.d/vendor/color-theme-twilight.el")
+(color-theme-twilight)
+
+;; (load-file "~/.emacs.d/vendor/color-theme-ir-black.el")
+;; (color-theme-ir-black)
 ;; (color-theme-charcoal-black)
 ;; (color-theme-arjen)
 

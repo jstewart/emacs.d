@@ -1,11 +1,3 @@
-;; useful-functions.el
-;;
-;; Borrowed from http://github.com/technomancy/emacs-starter-kit/
-;;
-;; Walter McGinnis, 2009-06-28
-;;
-;; http://github.com/walter/aquamacs-emacs-starter-kit
-
 (defun indent-buffer ()
   (interactive)
   (indent-region (point-min) (point-max)))

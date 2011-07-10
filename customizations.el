@@ -7,11 +7,20 @@
 (setq inhibit-startup-message t)
 
 ;; Nice to haves
-(setq-default show-trailing-whitespace t)
-(defalias 'qrr 'query-replace-regexp)
 (require 'uniquify)
 (setq uniquify-buffer-name-style 'post-forward-angle-brackets)
-(global-auto-revert-mode t)
+
+
+(ido-mode t)
+(setq ido-enable-flex-matching t)
 (setq ack-prompt-for-directory t)
+(global-auto-revert-mode t)
+(setq-default show-trailing-whitespace t)
+(defalias 'qrr 'query-replace-regexp)
+
+;; Prefer utf-8
+(set-terminal-coding-system 'utf-8)
+(set-keyboard-coding-system 'utf-8)
+(prefer-coding-system 'utf-8)
 
 (provide 'customizations)

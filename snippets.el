@@ -11,6 +11,17 @@
           #'(lambda ()
               (setq yas/mode-symbol 'erb-mode)))
 
+;; Need this to fix yas for js2-mode
+(eval-after-load 'js2-mode
+  '(progn
+     (define-key js2-mode-map (kbd "TAB") (lambda()
+                                            (interactive)
+                                            (let ((yas/fallback-behavior 'return-nil))
+                                              (unless (yas/expand)
+                                                (indent-for-tab-command)
+                                                (if (looking-back "^\s*")
+                                                    (back-to-indentation))))))))
+
 ;;; If you are using MuMaMo or nxml, you will need to tweak the mumamo
 ;;; keymap to let tab work for yasnippets
 ;; (if (boundp 'mumamo:version)
@@ -22,18 +33,5 @@
 ;;             map))
 ;;      (mumamo-add-multi-keymap 'mumamo-multi-major-mode mumamo-map))
 ;;  )
-
-;; Yasnippet workaround for ruby-electric-mode
-;; See: http://code.google.com/p/yasnippet/issues/detail?id=71
-;; (defun yas/advise-indent-function (function-symbol)
-;;   (eval `(defadvice ,function-symbol (around yas/try-expand-first activate)
-;;            ,(format
-;;              "Try to expand a snippet before point, then call `%s' as usual"
-;;              function-symbol)
-;;            (let ((yas/fallback-behavior nil))
-;;              (unless (and (interactive-p)
-;;                           (yas/expand))
-;;                ad-do-it)))))
-;; (yas/advise-indent-function 'ruby-indent-line)
 
 (provide 'snippets)
