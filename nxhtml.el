@@ -8,9 +8,10 @@
  indent-region-mode t
  rng-nxml-auto-validate-flag nil
  nxml-degraded t)
-(add-to-list 'auto-mode-alist '("\\.html\\.erb$" . eruby-nxhtml-mumamo-mode))
-(add-to-list 'auto-mode-alist '("\\.erb$" . eruby-nxhtml-mumamo-mode))
-(add-to-list 'auto-mode-alist '("\\.rhtml$" . eruby-nxhtml-mumamo-mode))
-(add-to-list 'auto-mode-alist '("\\.html$" . django-html-mumamo-mode))
+;; (add-to-list 'auto-mode-alist '("\\.html\\.erb$" . eruby-nxhtml-mumamo-mode))
+;; (add-to-list 'auto-mode-alist '("\\.erb$" . eruby-nxhtml-mumamo-mode))
+;; (add-to-list 'auto-mode-alist '("\\.rhtml$" . eruby-nxhtml-mumamo-mode))
 
+(add-to-list 'auto-mode-alist '("\\.html$" . django-html-mumamo-mode))
+(add-to-list 'auto-mode-alist '("\\.djhtml$" . django-html-mumamo-mode))
 (provide 'nxhtml)

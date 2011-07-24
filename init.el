@@ -16,6 +16,7 @@
 (require 'full-ack)
 (require 'anything-setup)
 (require 'multi-term)
+(require 'nxhtml)
 (require 'whitespace)
 (require 'undo-tree)
 (require 'yaml-mode)
@@ -26,13 +27,13 @@
 (require 'appearance)
 (require 'erc-setup)
 (require 'custom-keys)
+(require 'customizations)
 (require 'misc-mode-tweaks)
+(require 'snippets)
 (require 'python-config)
 (require 'ruby-config)
 (require 'useful-functions)
-(require 'snippets)
 (require 'etags-config)
-(require 'customizations)
 (require 'local-settings)
 ;;;;; end my customizations
 

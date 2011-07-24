@@ -2,7 +2,9 @@
 (require 'rhtml-mode)
 (require 'rinari)
 (require 'ri)
+(require 'rvm)
 
+(rvm-use-default)
 (add-to-list 'auto-mode-alist '("\\.rjs$" . ruby-mode))
 (add-to-list 'auto-mode-alist '("\\.rxml$" . ruby-mode))
 (add-to-list 'auto-mode-alist '("\\.rake$" . ruby-mode))

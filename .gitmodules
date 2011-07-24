@@ -1,0 +1,6 @@
+[submodule "vendor/django-mode"]
+	path = vendor/django-mode
+	url = https://github.com/myfreeweb/django-mode.git
+[submodule "vendor/html5-el"]
+	path = vendor/html5-el
+	url = https://github.com/hober/html5-el.git
