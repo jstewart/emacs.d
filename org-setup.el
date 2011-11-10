@@ -1,7 +1,7 @@
 ;; Org-mode setup
-(add-to-list 'load-path "~/.emacs.d/vendor/org/lisp")
-(add-to-list 'load-path "~/.emacs.d/vendor/org/contrib/lisp")
-(require 'org-install)
+;;(add-to-list 'load-path "~/.emacs.d/vendor/org/lisp")
+;;(add-to-list 'load-path "~/.emacs.d/vendor/org/contrib/lisp")
+;;(require 'org-install)
 
 (add-to-list 'auto-mode-alist '("\\.org\\'" . org-mode))
 (global-set-key "\C-cl" 'org-store-link)
@@ -17,7 +17,7 @@
        '((sequence "TODO(t!)" "WAIT(w@/!)" "|" "DONE(d@/!)" "CANCELED(c@)")))
 
  (setq org-link-abbrev-alist
-       '(("jira" . "http://jira.fusionary.com:8080/browse/")
+       '(("jira" . "http://fusionary.jira.com/browse/")
          ("google"   . "http://www.google.com/search?q=")))
 
 (setq org-agenda-files (list "~/org/work.org"

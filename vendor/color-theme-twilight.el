@@ -1,4 +1,6 @@
-;; Twilight Colour Theme for Emacs.
+;;; color-theme-twilight.el --- Twilight Colour Theme for Emacs.
+;; Author: Marcus Crafter
+;; Version: 0.1
 ;;
 ;; Defines a colour scheme resembling that of the original TextMate Twilight colour theme.
 ;; To use add the following to your .emacs file (requires the color-theme package):
@@ -44,12 +46,6 @@
 	  (font-lock-preprocessor-face ((t (:foreground "Aquamarine"))))
 	  (font-lock-reference-face ((t (:foreground "SlateBlue"))))
 
-	  ;; Enhanced-Ruby-Mode
-	  (ruby-string-delimiter-face  ((t (:foreground "#5A6340"))))
-	  (ruby-regexp-delimiter-face ((t (:foreground "orange"))))
-	  (ruby-heredoc-delimiter-face ((t (:foreground "#9B859D"))))
-	  (ruby-op-face ((t (:foreground "#CDA869"))))
-
 	  (font-lock-regexp-grouping-backslash ((t (:foreground "#E9C062"))))
 	  (font-lock-regexp-grouping-construct ((t (:foreground "red"))))
 
@@ -59,7 +55,7 @@
 	  (ido-only-match ((t (:foreground "#8F9D6A"))))
 	  (mumamo-background-chunk-submode ((t (:background "#222222")))) 
 
-	  (linum ((t (:background "#141314" :foreground "#2D2B2E"))))
+	  (linum ((t (:background "#DCDCDC" :foreground "#757575"))))
 	  (hl-line ((t (:background "#212121"))))  
 	  (yas/field-highlight-face ((t (:background "#27292A"))))
 
@@ -77,3 +73,5 @@
 	  (toolbar ((t (nil))))
 	  (underline ((nil (:underline nil))))
 	  (zmacs-region ((t (:background "snow" :foreground "blue")))))))
+
+;;; color-theme-twilight.el ends here

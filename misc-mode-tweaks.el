@@ -28,9 +28,11 @@
                   'font-lock-beginning-of-syntax-function)))
 
 ;; Multi term setup
+(require 'multi-term)
 (multi-term-keystroke-setup)
 (setq multi-term-program "/bin/bash")
 
+(require 'undo-tree)
 (global-undo-tree-mode)
 
 (add-to-list 'auto-mode-alist '("\\.yml$" . yaml-mode))
