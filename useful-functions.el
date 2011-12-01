@@ -52,4 +52,17 @@ there's a region, all lines that region covers will be duplicated."
 
 (global-set-key (kbd "C-c k") 'delete-this-buffer-and-file)
 
+
+(defun go-to-doc (base-url)
+    (let ((default (symbol-name (symbol-at-point))))
+      (browse-url (concat base-url (read-string "Search term: " nil nil default)))))
+
+  (defun rails-doc ()
+    (interactive)
+    (go-to-doc "http://apidock.com/rails/search?query="))
+
+  (defun ruby-doc ()
+    (interactive)
+    (go-to-doc "http://apidock.com/ruby/search?query="))
+
 (provide 'useful-functions)

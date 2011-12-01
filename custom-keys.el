@@ -7,6 +7,8 @@
 (global-set-key [f6] 'indent-buffer)
 (global-set-key [f5] 'delete-trailing-whitespace)
 (global-set-key [f7] 'multi-term)
+(global-set-key (kbd "C-<f7>") 'multi-term-next)
+(global-set-key (kbd "s-<f7>") 'multi-term-prev)
 (global-set-key (kbd "C-<f8>") 'hs-hide-all)
 (global-set-key (kbd "M-<f8>") 'hs-show-all)
 (global-set-key (kbd "s-<f8>") 'hs-toggle-hiding)
