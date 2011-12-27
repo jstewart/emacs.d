@@ -1,6 +1,9 @@
-;; Js2 for javsascript
-(add-to-list 'auto-mode-alist '("\\.js$" . js2-mode))
-(setq js2-basic-offset 2)
+;; Misc modes by filetype and hooks
+(add-to-list 'auto-mode-alist '("\\.yml$" . yaml-mode))
+(add-to-list 'auto-mode-alist '("\\.scss$" . sass-mode))
+(add-to-list 'auto-mode-alist '("\\.scss$" . javascript-mode))
+
+(add-hook 'sgml-mode-hook 'zencoding-mode)
 
 ;; Hideshow (code folding)
 (load-library "hideshow")
@@ -34,9 +37,5 @@
 
 (require 'undo-tree)
 (global-undo-tree-mode)
-
-(add-to-list 'auto-mode-alist '("\\.yml$" . yaml-mode))
-
-(add-hook 'sgml-mode-hook 'zencoding-mode)
 
 (provide 'misc-mode-tweaks)
