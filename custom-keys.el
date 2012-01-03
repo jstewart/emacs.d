@@ -4,6 +4,7 @@
 (require 'rinari)
 (global-set-key [f1] 'hippie-expand)
 (global-set-key [f2] 'rinari-insert-erb-skeleton)
+(global-set-key [f3] 'deft)
 (global-set-key [f6] 'indent-buffer)
 (global-set-key [f5] 'delete-trailing-whitespace)
 (global-set-key [f7] 'multi-term)

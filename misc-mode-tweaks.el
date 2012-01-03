@@ -1,7 +1,22 @@
 ;; Misc modes by filetype and hooks
 (add-to-list 'auto-mode-alist '("\\.yml$" . yaml-mode))
 (add-to-list 'auto-mode-alist '("\\.scss$" . sass-mode))
-(add-to-list 'auto-mode-alist '("\\.scss$" . javascript-mode))
+
+(add-to-list 'auto-mode-alist '("\\.js$" . javascript-mode))
+(setq js-indent-level 2)
+
+(require 'deft)
+(setq deft-text-mode 'markdown-mode)
+(setq deft-use-filename-as-title t)
+(setq deft-auto-save-interval 0)
+
+;; This Makes smerge-mode active when there are git conflict markers in a file.
+(defun sm-try-smerge ()
+  (save-excursion
+    (goto-char (point-min))
+    (when (re-search-forward "^<<<<<<< " nil t)
+      (smerge-mode 1))))
+(add-hook 'find-file-hook 'sm-try-smerge t)
 
 (add-hook 'sgml-mode-hook 'zencoding-mode)
 
@@ -16,19 +31,6 @@
 (require 'flymake)
 (set-face-background 'flymake-errline "red4")
 (set-face-background 'flymake-warnline "dark slate blue")
-
-
-;; Mumamo is making emacs 23.3 freak out:
-;; Remove this when Mumamo fixes itself.
-(when (and (equal emacs-major-version 23)
-           (equal emacs-minor-version 3))
-  (eval-after-load "bytecomp"
-    '(add-to-list 'byte-compile-not-obsolete-vars
-                  'font-lock-beginning-of-syntax-function))
-  ;; tramp-compat.el clobbers this variable!
-  (eval-after-load "tramp-compat"
-    '(add-to-list 'byte-compile-not-obsolete-vars
-                  'font-lock-beginning-of-syntax-function)))
 
 ;; Multi term setup
 (require 'multi-term)
